@@ -123,14 +123,8 @@ body {
     text-align: center;
 }
 
-.cf:before,
-.cf:after {
-    content: " ";
-    /* 1 */
+.cf::after {
+    content: "";
     display: table;
-    /* 2 */
-}
-
-.cf:after {
     clear: both;
 }
