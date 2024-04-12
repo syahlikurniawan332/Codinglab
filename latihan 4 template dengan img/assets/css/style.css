@@ -1,0 +1,826 @@
+/* penerapan ke semua elemen  */
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    width: 1100px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.cf::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.head-text {
+    float: left;
+    line-height: 400px;
+    font-size: 10px;
+    color: aliceblue;
+    box-sizing: border-box;
+}
+
+.head-text span {
+    background-color: green;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.paragraf {
+    float: left;
+    margin-top: -200px;
+}
+
+.paragraf h1 {
+    color: aliceblue;
+    font-size: 58px;
+}
+
+.paragraf p {
+    color: aliceblue;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: -12px;
+    margin-bottom: 60px;
+}
+
+.button-head {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.learn a,
+.intro a {
+    text-decoration: none;
+    color: white;
+}
+
+.learn a {
+    padding: 15px 25px;
+    border-radius: 5px;
+    background-color: green;
+}
+
+.learn a:hover {
+    background-color: black;
+}
+
+/* bagian header-of-template */
+
+/* header-1 */
+.header-of-template {
+    height: 100px;
+    box-sizing: border-box;
+    /* position: relative; */
+}
+
+.header-background-color {
+    background-color: green;
+    max-width: 1960px;
+    margin: 0 auto;
+    color: aliceblue;
+}
+
+/* judul bagian 1 */
+.header-top {
+    width: auto;
+    height: 30px;
+    padding: 5px 0;
+    box-sizing: border-box;
+}
+
+.time-icon,
+.email {
+    float: left;
+    margin-right: 80px;
+}
+
+.visit-us {
+    margin-top: -15px;
+    float: right;
+    box-sizing: border-box;
+}
+
+.ket-1,
+.ket-2 {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.ket-2 i {
+    margin-left: 30px;
+}
+
+/* judul bagian 2 */
+/* .position-top {
+    position: fixed;
+    top: 0;
+} */
+
+.header-bottom {
+    width: auto;
+    height: 70px;
+    padding: 5px 0;
+    box-sizing: border-box;
+}
+
+.navigasi {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.header-menu {
+    margin-top: -5px;
+    box-sizing: border-box;
+}
+
+.header-menu ul li {
+    display: inline-block;
+    list-style: none;
+    margin-left: 10px;
+    box-sizing: border-box;
+}
+
+.header-menu ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.header-menu ul i {
+    margin: 0 5px;
+}
+
+.header-right {
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+
+.header-right a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    background-color: green;
+    padding: 15px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+}
+
+.header-right a:hover {
+    background-color: black;
+}
+
+.banner {
+    background-image: url('https://wisatarakyat.com/wp-content/uploads/2023/03/specialist-technician-professional-engineer-with-laptop-tablet-maintenance-checking-installing-solar-roof-panel-factory-rooftop-sunlight-engineers-holding-tablet-check-solar-roof.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 700px;
+    max-width: 1960px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+
+.kumpulan-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -100px;
+}
+
+.kumpulan-info .info {
+    width: 250px;
+    height: 200px;
+    padding: 25px;
+    box-sizing: border-box;
+    font-weight: normal;
+    border-radius: 10px;
+    background-color: white;
+    border: solid;
+    text-align: left;
+}
+
+.info p {
+    color: gray;
+}
+
+/* konten */
+.content-1 {
+    width: auto;
+    height: 400px;
+    box-sizing: border-box;
+}
+
+.head-content {
+    float: left;
+    line-height: 300px;
+    font-size: 10px;
+    color: green;
+    box-sizing: border-box;
+}
+
+.head-content span {
+    background-color: green;
+    color: aliceblue;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.content-1 .left-content {
+    float: left;
+    width: 500px;
+    margin-top: -150px;
+    box-sizing: border-box;
+}
+
+.left-content h1 {
+    font-size: 36px;
+}
+
+.left-content p {
+    color: gray;
+}
+
+.icon {
+    display: flex;
+    justify-content: left;
+    margin-bottom: 30px;
+}
+
+.icon-1,
+.icon-2 {
+    margin-left: -30px;
+    width: 50%;
+}
+
+.icon-left,
+.icon-right {
+    float: left;
+    width: 50%;
+    text-align: left;
+}
+
+.icon-right h1 {
+    color: green;
+    /* margin-top: -5px; */
+    margin-bottom: -8px;
+}
+
+.icon-left {
+    text-align: left;
+    line-height: 5;
+    text-align: center;
+    font-weight: bold;
+}
+
+.content-1 .right-content {
+    float: right;
+    width: 50%;
+    margin-top: -150px;
+    box-sizing: border-box;
+}
+
+.content-1 .right-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* content-2 */
+.content-2 {
+    margin-top: 350px;
+    width: auto;
+    height: 600px;
+    box-sizing: border-box;
+}
+
+.head-content-2 {
+    font-size: 10px;
+    text-align: center;
+    color: green;
+}
+
+.head-content-2 span {
+    color: white;
+    background-color: green;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.head-start {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 80px;
+}
+
+.body-content-2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.info-content-2 {
+    width: 260px;
+    height: 450px;
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: aliceblue;
+}
+
+.info-content-2 h1 {
+    margin-top: 150px;
+}
+
+.info-content-2 p {
+    font-size: larger;
+    margin-bottom: 40px;
+}
+
+.info-content-2 a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+/* content 3 */
+.content-3 {
+    margin-top: 350px;
+    width: auto;
+    height: 600px;
+    box-sizing: border-box;
+}
+
+.kumpulan-proses {
+    display: flex;
+    justify-content: space-between;
+}
+
+.kumpulan-proses .proses {
+    width: 340px;
+    height: 220px;
+    border-radius: 10px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.kumpulan-proses .proses img {
+    border: 0;
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;
+}
+
+/* .step {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 88px;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    justify-content: center;
+    border-radius: 0 10px 0 0
+}
+
+.step span {
+    font-size: 34px;
+    letter-spacing: 0.05em;
+    font-weight: 900;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: var(--color-primary);
+    color: #fff;
+} */
+
+.kumpulan-proses .proses h1 {
+    font-size: 18px;
+    text-align: left;
+}
+
+/* content-4 */
+.content-4 {
+    margin-top: 100px;
+    width: auto;
+    height: auto;
+    box-sizing: border-box;
+}
+
+.content-4 .container {
+    position: relative;
+    padding: 60px;
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://th.bing.com/th/id/OIP.MOqJnfZQCNUoM364lNazCwHaHa?w=1024&h=1024&rs=1&pid=ImgDetMain');
+    opacity: 0.5;
+    border-radius: 15px;
+    border: solid;
+}
+
+.head-content-3 {
+    font-size: 6px;
+    text-align: left;
+    color: green;
+}
+
+.head-content-3 span {
+    color: white;
+    background-color: green;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.content-body-4 {
+    position: relative;
+    z-index: 1;
+    color: aliceblue;
+    display: flex;
+    justify-content: space-between;
+}
+
+.content-body-4 form {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* content 5 */
+.content-5 {
+    margin-top: 150px;
+    width: auto;
+    height: 600px;
+    box-sizing: border-box;
+}
+
+.head-content-5 {
+    float: left;
+    font-size: 10px;
+    color: green;
+    box-sizing: border-box;
+}
+
+.head-content-5 span {
+    background-color: green;
+    color: aliceblue;
+    padding: 5px;
+}
+
+.content-body-5 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-content-5 {
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.question-5 {
+    border-bottom: solid;
+}
+
+.question-5 .tampil {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: large;
+}
+
+.left-content-5 p {
+    display: none;
+}
+
+.right-content-5 {
+    float: right;
+    width: 50%;
+    box-sizing: border-box;
+    margin-top: -100px;
+}
+
+.top-content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.video-intro,
+.intro .ket {
+    width: 50%;
+    padding: 20px;
+}
+
+.video-intro img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bottom-content {
+    width: 100%;
+    margin-left: 25px;
+    margin-top: -31px;
+    box-sizing: border-box;
+}
+
+.bottom-content img {
+    margin-left: 30px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* content-6 */
+.content-6 {
+    margin-top: 150px;
+    margin: 0 auto;
+    width: auto;
+    max-width: 1960px;
+    height: 600px;
+    box-sizing: border-box;
+}
+
+.header-content {
+    margin-bottom: 100px;
+}
+
+.head-6 {
+    font-size: xx-large;
+    text-align: center;
+}
+
+.kumpulan-case-study {
+    display: flex;
+    justify-content: space-evenly
+}
+
+.kumpulan-case-study .case {
+    width: 480px;
+    height: 350px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.case img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* content-7  */
+.content-7 {
+    margin: 0 auto;
+    width: auto;
+    max-width: 1960px;
+    /* height: 600px; */
+    box-sizing: border-box;
+    margin-top: 200px;
+}
+
+.content-7 .header-content p {
+    width: 40%;
+    margin: 10px auto;
+}
+
+.bagian-tengah {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.bagian-tengah .kumpulan-feedback {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.kumpulan-feedback .feedback {
+    width: 100%;
+}
+
+.info-tambahan {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.info-tambahan .info-add {
+    margin-right: 100px;
+    font-size: xx-large;
+    font-weight: lighter;
+}
+
+/* content-8 */
+.content-8 {
+    margin: 0 auto;
+    width: auto;
+    box-sizing: border-box;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    margin-top: 200px;
+    background-color: rgb(235, 235, 235);
+}
+
+.kumpulan-blog {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.blog-utama {
+    width: 50%;
+    background-color: white;
+    border-radius: 10px;
+    margin-right: 10px;
+    padding-left: 20px;
+    padding-bottom: 50px;
+}
+
+.blog-utama .gambar-blog {
+    margin-top: 10px;
+    width: 95%;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.gambar-blog img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.info-tgl {
+    display: flex;
+    justify-content: center;
+}
+
+.info-tgl p {
+    margin-right: 20px;
+}
+
+.blog-utama .judul-blog {
+    text-align: left;
+    font-size: large;
+    margin-bottom: 50px;
+}
+
+.blog-sampingan {
+    width: 50%;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.blog-sampingan .blog-kedua,
+.blog-sampingan .blog-ketiga {
+    margin: 0 10px;
+    background-color: whitesmoke;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.blog-kedua .gambar-blog,
+.blog-ketiga .gambar-blog {
+    width: 45%;
+    float: left;
+    height: 200px;
+    text-align: center;
+    margin: 2px;
+    box-sizing: border-box;
+}
+
+.info-8 {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    text-align: left;
+    margin: 5px;
+    box-sizing: border-box;
+}
+
+.blog-kedua .informasi,
+.blog-ketiga .informasi {
+    font-size: x-small;
+}
+
+.blog-kedua .judul-blog,
+.blog-ketiga .judul-blog {
+    font-size: small;
+    margin-bottom: 42px;
+}
+
+/* content-9 */
+.content-9 {
+    margin: 40px auto;
+    width: auto;
+    box-sizing: border-box;
+}
+
+.kumpulan-sponsor {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sponsor {
+    margin-top: 60px;
+}
+
+.sponsor img {
+    object-fit: cover;
+}
+
+/* sponsor */
+.footer {
+    background-color: black;
+    color: white;
+    background-image: url('https://html.themewant.com/solari/assets/images/footer/07.png');
+    background-repeat: no-repeat;
+    opacity: 0.9;
+}
+
+
+.daftar-info-footer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.info-footer {
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.info-footer p {
+    margin-bottom: 60px;
+    font-size: larger;
+}
+
+.info-footer h1 {
+    margin-top: -6px;
+}
+
+.info-footer ul li {
+    list-style: none;
+    margin-bottom: 10px;
+    text-align: left;
+    margin-left: -30px;
+}
+
+.info-footer ul li a {
+    text-decoration: none;
+    color: rgb(188, 186, 186);
+    font-size: large;
+}
+
+.info-footer .visit-us {
+    width: 100%;
+}
+
+.bagian-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: -60px;
+}
+
+.logo-footer {
+    margin-right: 35px;
+    text-align: left;
+}
+
+.isi-footer {
+    width: 100%;
+}
+
+.isi-footer span {
+    font-weight: bold;
+}
+
+.isi-footer p {
+    color: gainsboro;
+}
+
+.footer .copyright {
+    text-align: center;
+    font-size: large;
+    padding: 20px;
+    color: gray;
+}
