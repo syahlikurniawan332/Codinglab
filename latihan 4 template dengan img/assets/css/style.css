@@ -3,6 +3,7 @@
 body {
     padding: 0;
     margin: 0;
+    font-family: "Albert Sans", sans-serif;
 }
 
 .container {
@@ -43,8 +44,8 @@ body {
 
 .paragraf p {
     color: aliceblue;
-    font-weight: bold;
     font-size: 18px;
+    font-weight: 500;
     margin-top: -12px;
     margin-bottom: 60px;
 }
@@ -55,14 +56,42 @@ body {
     justify-content: space-between;
 }
 
+.button-head div .fa {
+    font-size: 55px;
+    color: white;
+    margin-top: -20px;
+}
+
+.call-button {
+    display: flex;
+    justify-content: space-between;
+    gap: 14px;
+}
+
+.call-button .info {
+    margin-top: -15px;
+}
+
+.call-button .info span {
+    font-size: small;
+    color: gray;
+}
+
+.call-button .info a h6 {
+    margin-top: 6px;
+    color: black;
+    font-size: medium;
+}
+
 .learn a,
 .intro a {
     text-decoration: none;
     color: white;
+    font-weight: bold;
 }
 
 .learn a {
-    padding: 15px 25px;
+    padding: 15px 20px;
     border-radius: 5px;
     background-color: green;
 }
@@ -177,6 +206,7 @@ body {
     background-color: black;
 }
 
+/* banner  */
 .banner {
     background-image: url('https://wisatarakyat.com/wp-content/uploads/2023/03/specialist-technician-professional-engineer-with-laptop-tablet-maintenance-checking-installing-solar-roof-panel-factory-rooftop-sunlight-engineers-holding-tablet-check-solar-roof.jpg');
     background-repeat: no-repeat;
@@ -187,7 +217,7 @@ body {
     box-sizing: border-box;
 }
 
-
+/* kumpulan info  */
 .kumpulan-info {
     display: flex;
     justify-content: space-between;
@@ -195,14 +225,13 @@ body {
 }
 
 .kumpulan-info .info {
-    width: 250px;
-    height: 200px;
+    width: 263px;
+    height: 266px;
     padding: 25px;
     box-sizing: border-box;
     font-weight: normal;
     border-radius: 10px;
-    background-color: white;
-    border: solid;
+    background-color: #f1f1f1;
     text-align: left;
 }
 
@@ -249,7 +278,7 @@ body {
 
 .icon {
     display: flex;
-    justify-content: left;
+    justify-content: space-between;
     margin-bottom: 30px;
 }
 
@@ -263,13 +292,20 @@ body {
 .icon-right {
     float: left;
     width: 50%;
-    text-align: left;
+}
+
+.icon-left {
+    margin-top: 25px;
 }
 
 .icon-right h1 {
     color: green;
     /* margin-top: -5px; */
     margin-bottom: -8px;
+}
+
+.icon-right p {
+    font-size: small;
 }
 
 .icon-left {
@@ -327,27 +363,33 @@ body {
 
 .info-content-2 {
     width: 260px;
-    height: 450px;
     border-radius: 10px;
     padding: 20px;
     box-sizing: border-box;
     background-color: aliceblue;
 }
+.info-content-2 .icon-content-2 {
+    margin-left: 10px;
+    margin-top: 15px;
+}
+.info-content-2 .icon-content-2 svg {
+    border: 1px solid green;
+    padding: 10px;
+}
 
-.info-content-2 h1 {
-    margin-top: 150px;
+.info-content-2 h3 {
+    margin-top: 100px;
 }
 
 .info-content-2 p {
-    font-size: larger;
+    font-size: small;
+    color: gray;
     margin-bottom: 40px;
 }
 
 .info-content-2 a {
     text-decoration: none;
     color: black;
-    font-weight: bold;
-    letter-spacing: 5px;
 }
 
 /* content 3 */
