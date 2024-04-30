@@ -24,6 +24,8 @@ body {
     font-size: 10px;
     color: aliceblue;
     box-sizing: border-box;
+    position: relative;
+    top: -100px;
 }
 
 .head-text span {
@@ -36,6 +38,7 @@ body {
     float: left;
     margin-top: -200px;
     position: relative;
+    top: -100px;
 }
 
 .paragraf h1 {
@@ -91,15 +94,58 @@ body {
     font-weight: bold;
 }
 
-.learn a {
-    padding: 15px 20px;
+.learn {
+    top: -15px;
     border-radius: 5px;
-    background-color: green;
+    padding: 0 20px;
+    height: 40px;
+    line-height: 40px;
+    background-color: black;
+    position: relative;
 }
 
-.learn a:hover {
-    background-color: black;
+.learn a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: 5px;
+    background-color: green;
+    transition: all .5s ease;
 }
+
+.learn a:hover::before,
+.contact a:hover::before {
+    top: 0;
+    left: 50%;
+    bottom: 0;
+    right: 50%;
+}
+
+.learn a::after {
+    content: "Learn More";
+    position: absolute;
+    top: 0;
+    left: 20px;
+    color: white;
+    font-weight: bold;
+    line-height: 40px;
+    z-index: 1;
+}
+
+.contact a::after {
+    content: "Get It Now";
+}
+
+.read a::after {
+    content: "Read More";
+}
+
+/* .learn a {
+    visibility: hidden;
+} */
 
 /* bagian header-of-template */
 
@@ -192,43 +238,89 @@ body {
 }
 
 .header-right {
-    margin-top: 10px;
-    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 0 20px;
+    height: 40px;
+    line-height: 40px;
+    background-color: black;
+    position: relative;
 }
 
 .header-right a {
     text-decoration: none;
     color: white;
-    font-weight: bold;
-    background-color: green;
-    padding: 15px;
+    font-weight: 700;
+}
+
+.header-right a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
     border-radius: 5px;
-    letter-spacing: 1px;
+    background-color: green;
+    transition: all .5s ease;
 }
 
-.header-right a:hover {
-    background-color: black;
+.header-right a:hover::before {
+    top: 0;
+    left: 50%;
+    bottom: 0;
+    right: 50%;
 }
 
-/* banner  */
-.banner {
-    background-image: url('https://wisatarakyat.com/wp-content/uploads/2023/03/specialist-technician-professional-engineer-with-laptop-tablet-maintenance-checking-installing-solar-roof-panel-factory-rooftop-sunlight-engineers-holding-tablet-check-solar-roof.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 700px;
-    max-width: 1960px;
+.header-right a::after {
+    content: "Call for help: 682-3386-69862";
+    position: absolute;
+    top: 0;
+    left: 20px;
+    color: white;
+    font-weight: bold;
+    line-height: 40px;
+    z-index: 1;
+}
+
+.header-right a .call-for-help {
+    visibility: hidden;
+}
+
+/* slide  */
+.slide {
     margin: 0 auto;
-    box-sizing: border-box;
+    max-width: 1920px;
+    height: 650px;
+    position: relative;
+    overflow: hidden;
 }
+
+.slide .mySlides {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.slide .mySlides img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
 
 /* kumpulan info  */
 .kumpulan-info {
     display: flex;
     justify-content: space-between;
-    margin-top: -100px;
+    margin-top: -120px;
+    position: relative;
 }
 
-.kumpulan-info .info {
+.kumpulan-info .info,
+.kumpulan-info .info1 {
     width: 263px;
     height: 266px;
     padding: 25px;
@@ -237,10 +329,85 @@ body {
     border-radius: 10px;
     background-color: #f1f1f1;
     text-align: left;
+    transition: all .8s ease;
+    position: relative;
+    overflow: hidden;
 }
 
-.info p {
+.info1 p {
     color: gray;
+}
+
+.img-bayang {
+    width: 263px;
+    height: 266px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    z-index: -1;
+}
+
+.background-bayang {
+    width: 263px;
+    height: 266px;
+    background-color: #f1f1f1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    transform: translateY(0);
+    transition: all 1s ease;
+    z-index: 1;
+}
+
+.text {
+    position: absolute;
+    width: 263px;
+    height: 266px;
+    box-sizing: border-box;
+    font-weight: normal;
+    border-radius: 10px;
+    text-align: left;
+    z-index: 2;
+    transition: all .8s ease;
+}
+
+.img-bayang img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.info1 h3 a {
+    text-decoration: none;
+    color: black;
+}
+
+/* pseudeo */
+.info1:hover .img-bayang {
+    z-index: 1;
+}
+
+.info1:hover .text {
+    z-index: 2;
+}
+
+.info1:hover .text p,
+.info1:hover .text h3 a {
+    color: white;
+    z-index: 2;
+}
+
+.info1 .text h3 a:hover {
+    color: green;
+    z-index: 3;
+}
+
+.info1:hover .background-bayang {
+    transform: translateY(-100%);
+    /* z-index: -1; */
 }
 
 /* konten */
@@ -386,18 +553,43 @@ body {
 
 .info-content-2 {
     width: 260px;
+    height: 380px;
     border-radius: 10px;
     padding: 20px;
     box-sizing: border-box;
     background-color: aliceblue;
+    position: relative;
+    overflow: hidden;
 }
+
+.info-content-2 .img-bayang,
+.info-content-2 .background-bayang,
+.info-content-2 .text {
+    height: 380px;
+    width: 260px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.img-bayang img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
 .info-content-2 .icon-content-2 {
     margin-left: 10px;
     margin-top: 15px;
 }
+
 .info-content-2 .icon-content-2 svg {
     border: 1px solid green;
     padding: 10px;
+    border-radius: 10px;
+    width: 50px;
+    height: 50px;
+    box-sizing: border-box;
 }
 
 .info-content-2 h3 {
@@ -415,6 +607,43 @@ body {
     color: black;
 }
 
+/* pseudeo */
+.info-content-2:hover .icon-content-2 svg {
+    background-color: white;
+    border-radius: 10px;
+    width: 50px;
+    height: 50px;
+    border: none;
+}
+
+.info-content-2:hover .img-bayang {
+    z-index: 1;
+}
+
+.info-content-2:hover .text {
+    z-index: 2;
+    color: white;
+}
+
+.info-content-2:hover p,
+.info-content-2:hover a {
+    color: white;
+}
+
+.info-content-2 .text h3:hover {
+    color: green;
+    cursor: pointer;
+}
+
+.info-content-2 .text a:hover {
+    color: green;
+}
+
+.info-content-2:hover .background-bayang {
+    transform: translateY(-100%);
+    /* z-index: -1; */
+}
+
 /* content 3 */
 .content-3 {
     margin-top: 350px;
@@ -426,10 +655,8 @@ body {
 .kumpulan-proses {
     display: flex;
     justify-content: space-between;
-}
-
-.kumpulan-proses .proses {
-    position: relative;
+    height: 250px;
+    overflow: hidden;
 }
 
 .proses .step {
@@ -442,16 +669,19 @@ body {
     background-color: white;
     text-align: center;
     line-height: 70px;
+    z-index: 2;
 }
 
 .step span {
     font-size: 34px;
     letter-spacing: 0.05em;
     font-weight: 900;
-    color: #423a3a;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(0, 128, 0, 0.436);
 }
 
 .kumpulan-proses .proses {
+    position: relative;
     width: 340px;
     height: 220px;
     border-radius: 10px;
@@ -464,12 +694,19 @@ body {
     vertical-align: middle;
     max-width: 100%;
     height: auto;
+    transition: all .5s ease;
+    z-index: 1;
 }
 
 
 .kumpulan-proses .proses h1 {
     font-size: 18px;
     text-align: left;
+}
+
+/* pseudoco */
+.kumpulan-proses .proses:hover img {
+    transform: scale(1.1);
 }
 
 /* content-4 */
@@ -534,19 +771,34 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* background-color: aqua; */
 }
 
-.content-body-4 form .inp input{
+.content-body-4 form .inp input {
     position: relative;
     top: 0;
     margin-right: 20px;
     width: 170px;
     height: 50px;
-    border: solid;
-    border-radius: 10px;
-    opacity: 0.7;
+    border: solid 1px transparent;
+    border-radius: 3px;
     box-sizing: border-box;
+    background-color: transparent;
+    padding: 0 10px;
+    color: white;
+}
+
+.content-body-4 form .inp input:focus {
+    border-color: green;
+    outline: none;
+}
+
+.content-body-4 form .inp input::placeholder {
+    color: white;
+}
+
+
+.content-4 form .button-head .learn {
+    margin-top: 28px;
 }
 
 /* content 5 */
@@ -644,10 +896,12 @@ body {
     max-width: 1960px;
     height: 600px;
     box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
 }
 
 .header-content {
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 
 .head-6 {
@@ -655,23 +909,79 @@ body {
     text-align: center;
 }
 
+/* Kontainer gambar */
 .kumpulan-case-study {
     display: flex;
-    justify-content: space-evenly
+    justify-content: space-between;
+    transition: transform 0.5s ease; 
 }
 
+/* Elemen gambar */
 .kumpulan-case-study .case {
-    width: 480px;
-    height: 350px;
+    width: 25%; 
+    max-width: 25%; 
+    height: 350px; 
     border-radius: 10px;
     box-sizing: border-box;
+    overflow: hidden; 
+    position: relative;
+    transition: transform 0.5s ease; 
 }
 
-.case img {
+/* Gambar dalam case */
+.kumpulan-case-study .case img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Efek pergeseran gambar */
+.kumpulan-case-study.checked {
+    transform: translateX(calc(-25% - 20px)); /* Geser semua gambar ke kiri */
+}
+
+/* Kontainer radio button */
+.controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Elemen radio button */
+.controls label {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: gray;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+/* Sembunyikan radio button */
+input[type="radio"] {
+    display: none;
+}
+
+/* Efek hover pada radio button yang dipilih */
+input[type="radio"]:checked + label {
+    background-color: blue;
+}
+
+/* Atur jarak antar gambar */
+.kumpulan-case-study .case:not(:last-child) {
+    margin-right: 20px;
+}
+
+.kumpulan-case-study .case:hover img {
+    transform: scale(1.2);
+    cursor: pointer;
 }
 
 /* content-7  */

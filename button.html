@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tombol dengan Efek Perubahan dan Tirai</title>
+    <style>
+        .button {
+            background-color: black;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            font-size: 16px;
+            position: relative;
+        }
+
+        .button::before {
+            content: "";
+            position: absolute;
+            background-color: green;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            transition: all .5s ease;
+        }
+
+        .button:hover::before {
+            top: 0;
+            left: 50%;
+            right: 50%;
+            bottom: 0;
+        }
+
+
+
+        .coba,
+        .coba2 {
+            margin: 0 auto;
+            width: 800px;
+            background-color: aliceblue;
+            text-align: center;
+        }
+
+        .coba2 span {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 74px;
+            font-weight: 900;
+            color: transparent;
+            /* text-shadow: -1px -1px 1px rgba(12, 222, 68, 0.986); */
+            -webkit-text-stroke: 5px green;
+        }
+
+        .coba span {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 900;
+            -webkit-text-stroke: 2px rgba(0, 254, 0, 0.3);
+            /* Lebar border dan warna transparan */
+            font-size: 74px;
+            /* Sesuaikan ukuran font */
+            color: transparent;
+            /* Membuat warna teks menjadi transparan */
+        }
+
+        .element {
+            color: transparent;
+            position: relative;
+            font-size: 74px;
+            z-index: 1;
+            /* Menempatkan teks di lapisan atas */
+        }
+
+        .element::before {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            /* Menempatkan teks di lapisan bawah */
+            color: rgb(255, 255, 255);
+            -webkit-text-stroke: 2px blue;
+            opacity: 0.5;
+            /* Opacity untuk efek blur */
+            /* filter: blur(5px); */
+        }
+    </style>
+</head>
+
+<body>
+
+    <button class="button"><span>Tombol</span></button>
+
+
+    <div class="coba">
+        <span>01</span>
+    </div>
+    <div class="coba2">
+        <span>01</span>
+    </div>
+    <div class="element" data-text="Your Text Here">Your Text Here</div>
+
+</body>
+
+</html>
